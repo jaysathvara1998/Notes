@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="9dp"
+            android:text="Add Category"
+            android:textColor="#404040"
+            android:textSize="20sp" />
+
+        <Button
+            android:background="@drawable/cancel"
+            android:alpha="0.7"
+            android:layout_marginTop="9dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="25dp"
+            android:layout_width="25dp"
+            android:layout_alignParentRight="true"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:id="@+id/cancel_action"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+
+                <LinearLayout
+                    android:layout_margin="15dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:alpha="0.6"
+                        android:padding="5dp"
+                        app:srcCompat="@drawable/category2" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <EditText
+                            android:id="@+id/etCategory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top"
+                            android:hint="Category"
+                            android:maxLength="50"
+                            android:maxLines="2"
+                            android:paddingBottom="20dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+        </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|top"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#8BC53F" />
+
+        <Button
+            android:id="@+id/btnAddCategory"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/insert"
+            android:drawablePadding="15dp"
+            android:text="Add Category"
+            android:textColor="#8BC53F" />
+    </LinearLayout>
+</LinearLayout>

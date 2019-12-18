@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Notes</string>
+    <string name="userHint">Name</string>
+    <string name="emailHint">Email</string>
+    <string name="passwordHint">Password</string>
+    <string name="confPasswordHint">Confirm Password</string>
+    <string name="signInButton">Sign In</string>
+    <string name="signUpButton">Sign Up</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.splashapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".Activities.ChangePasswordActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.splashapplication.Activities.LoginActivity" />
+        </activity>
+        <activity
+            android:name=".Activities.AddTaskActivity"
+            android:screenOrientation="portrait"
+            android:label="Add Task">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.splashapplication.Activities.HomeActivity" />
+        </activity>
+        <activity android:name=".Activities.ForgotPasswordActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.splashapplication.Activities.LoginActivity" />
+        </activity>
+        <activity
+            android:name=".Activities.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name=".Activities.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Activities.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name=".Activities.SplashActivity"
+            android:noHistory="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_list"></meta-data>
+        </provider>
+
+    </application>
+
+</manifest>

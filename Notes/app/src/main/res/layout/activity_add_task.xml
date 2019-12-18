@@ -1,0 +1,207 @@
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+    <ImageView
+        android:background="@drawable/ivshape"
+        android:scaleType="centerCrop"
+        android:id="@+id/ivBanner"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <ScrollView
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:padding="5dp"
+                    android:alpha="0.6"
+                    android:id="@+id/ivTitle"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/title" />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <EditText
+                        android:id="@+id/etTitle"
+                        android:paddingBottom="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:hint="Task Title"
+                        android:maxLength="50"
+                        android:maxLines="2" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:alpha="0.6"
+                        android:padding="5dp"
+                        android:id="@+id/ivDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/desc" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <EditText
+                            android:paddingBottom="20dp"
+                            android:id="@+id/etTask"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top"
+                            android:maxLines="5"
+                            android:scrollbars="vertical"
+                            android:inputType="textMultiLine"
+                            android:hint="Task Description" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:alpha="0.6"
+                    android:padding="5dp"
+                    android:id="@+id/ivDate"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/date" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:padding="5dp">
+
+                    <EditText
+                        android:paddingBottom="20dp"
+                        android:id="@+id/etDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:hint="Select Date"
+                        android:inputType="none"
+                        tools:ignore="HardcodedText,TextFields" />
+
+                    <Button
+                        android:id="@+id/clear"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_gravity="right|center"
+                        android:background="@drawable/cancel"
+                        android:alpha="0.5" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="325dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:alpha="0.6"
+                        android:padding="5dp"
+                        app:srcCompat="@drawable/category2" />
+
+                    <Spinner
+                        android:id="@+id/spinner"
+                        style="@style/Widget.AppCompat.Spinner.Underlined"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="20dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnAddCategory"
+                        android:layout_width="25dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:alpha="0.5"
+                        android:background="@drawable/add" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|bottom"
+        android:orientation="vertical" >
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="#8BC53F" />
+        <Button
+            android:id="@+id/btnAddTask"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#8BC53F"
+            android:drawablePadding="15dp"
+            android:drawableLeft="@drawable/insert"
+            android:text="Add Task" />
+    </LinearLayout>
+</LinearLayout>
